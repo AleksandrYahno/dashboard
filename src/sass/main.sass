@@ -1,0 +1,454 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+    margin: 0
+    padding: 0
+    border: 0
+    font-size: 100%
+    font: inherit
+    vertical-align: baseline
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+    display: block
+
+body
+    line-height: 1
+
+ol, ul
+    list-style: none
+
+blockquote, q
+    quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+    content: ''
+    content: none
+
+table
+    border-collapse: collapse
+    border-spacing: 0
+
+
+// main style
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900')
+$fontSans: 'Source Sans Pro', sans-serif
+$colorBg: #F1F1F1
+$coloWhite: #FFFFFF
+$coloBlack: #FFFFFF
+$colorGray: #4B4B4B
+$colorBgActive: #F8F8F8
+$colorOrange: #FC5146
+$colorGreen: #ABCB57
+$coloBorder: #DCDCDC
+$colorBgActiveDark: #ADADAD
+
+*
+    outline: 0 !important
+button
+    cursor: pointer
+
+html
+    overflow-y: scroll
+    overflow-x: auto
+
+
+body
+    width: 100%
+    height: 100vh
+    overflow: hidden
+    position: relative
+    display: flex
+    justify-content: flex-end
+    background: $colorBg
+    font-family: $fontSans
+
+
+header
+    width: 130px
+    height: 100%
+    position: fixed
+    top: 0
+    left: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    background-image: url("../img/bg_header.png")
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    z-index: 9
+    .top-navigation,
+    .bottom-navigation
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+#topNavigation,
+#bottomNavigation
+    width: 100%
+    li
+        margin-bottom: 10px
+        position: relative
+        a
+            width: 100%
+            height: 115px
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            text-decoration: none
+            font-size: 16px
+            font-weight: 600
+            color: #787878
+            position: relative
+            img
+                max-width: 42px
+                margin-bottom: 10px
+
+        .active-navigation
+            color: $coloWhite
+            &:before
+                content: ""
+                position: absolute
+                left: 0
+                top: 0
+                display: block
+                width: 4px
+                height: 100%
+                background: $colorOrange
+                border-radius: 0 3px 3px 0
+        &:before
+            content: ""
+            display: flex
+            width: 100%
+            height: 20px
+            background-image: url("../img/icon-dotts.png")
+            background-position: center
+            background-repeat: no-repeat
+            position: absolute
+            top: -10px
+
+#bottomNavigation
+    li:first-child
+        &:before
+            display: none
+
+
+
+
+    li
+        a.active-navigation
+            &:before
+                display: none
+
+.count
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 30px
+    height: 30px
+    color: $coloWhite
+    background: $colorOrange
+    position: absolute
+    top: 10px
+    right: 24px
+    z-index: 9999
+    border-radius: 50%
+.count-no-active
+    background: $colorBgActiveDark
+
+
+
+.avatar
+    display: flex
+    height: 150px
+    width: 100%
+    align-items: center
+    justify-content: center
+
+    a
+        display: block
+        width: 80px
+        height: 80px
+        position: relative
+        .avatar-img
+            display: block
+            width: 80px
+            height: 80px
+            border-radius: 50%
+            overflow: hidden
+            background-image: url("../img/icon-avatar.png")
+            background-position: center
+            background-repeat: no-repeat
+            background-size: cover
+            position: relative
+
+        .count
+            top: -5px
+            right: -5px
+
+
+#main
+    width: calc(100% - 130px)
+    height: 100vh
+
+
+.wrapper
+    height: 100%
+    position: relative
+    background: $coloWhite
+
+
+.button
+    height: 55px
+    width: 100%
+    background: $coloWhite
+    border: none
+    border-top: 1px solid $coloBorder
+    position: absolute
+    bottom: 0
+    font-size: 18px
+    color: $colorGray
+    padding: 0 0 0 30px
+    display: flex
+    align-items: center
+    line-height: 0
+    img
+        transform: rotate(-90deg)
+        margin-left: 10px
+
+
+.head
+    height: 100px
+    background: $colorBg
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0 30px
+    .bredcrumb
+        display: flex
+        align-items: center
+        width: max-content
+        text-decoration: none
+        .bredcrumb-icon
+            background: $colorOrange
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-right: 10px
+            img
+                width: 16px
+        .bredcrumb-descriptions
+            color: $colorGray
+            font-size: 16px
+            font-weight: 600
+            padding: 0 40px
+            height: 40px
+            border: 1px solid $coloBorder
+            border-radius: 25px
+            display: flex
+            align-items: center
+            width: max-content
+            justify-content: center
+    .status
+        display: flex
+        align-items: center
+        width: max-content
+        text-decoration: none
+        .status-icon
+            background: $colorGreen
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-right: 10px
+            img
+                width: 11px
+        .status-descriptions
+            color: $colorGray
+            font-size: 16px
+            font-weight: 600
+            padding: 0 16px
+            height: 40px
+            border: 1px solid $coloBorder
+            border-radius: 25px
+            display: flex
+            align-items: center
+            width: max-content
+            justify-content: center
+            text-transform: uppercase
+            .icon-chat
+                width: 20px
+                margin-right: 10px
+
+            .icon-arrow
+                width: 11px
+                margin-left: 10px
+
+#tabs
+    height: inherit
+    position: relative
+    ul
+        display: flex
+        align-items: center
+        background: $colorBg
+        .ui-tabs-active
+            border: 1px solid #D3D7DA
+            background: $colorBgActive
+            border-radius: 0 3px 0 0
+            a
+                .count
+                    .count-sum
+                        background: $colorOrange
+                        color: $coloWhite
+        li
+            background: $coloWhite
+            position: relative
+            border: 1px solid #D3D7DA
+            border-bottom: 1px solid $coloWhite
+            &:first-child
+                border-right: none
+            &:last-child
+                border-radius: 0 3px 0 0
+            a
+                color: $colorGray
+                font-size: 18px
+                display: flex
+                align-items: center
+                justify-content: center
+                text-decoration: none
+                width: 268px
+                height: 80px
+                img
+                    margin-right: 15px
+                    max-height: 40px
+                .count
+                    .count-sum
+                        width: 30px
+                        height: 30px
+                        border-radius: 50px
+                        background: $colorBgActiveDark
+                        color: $coloWhite
+                        display: flex
+                        align-items: center
+                        justify-content: center
+        .tabs-descriptions
+            display: flex
+            width: 100%
+            justify-content: space-around
+            color: #C1C1C1
+            border: none
+            background: inherit
+
+
+.tabs
+    display: flex
+    justify-content: space-between
+    height: 100%
+    padding: 30px
+    position: relative
+    .projects
+        border: 1px solid $coloBorder
+        border-radius: 3px
+        width: 100%
+        height: calc(100% - 240px)
+        display: flex
+        flex: 10
+        position: relative
+        .projects-wrapper
+            width: 100%
+            overflow-y: scroll
+    .activity
+        border: 1px solid $coloBorder
+        border-radius: 3px
+        width: 100%
+        height: calc(100% - 240px)
+        display: flex
+        flex: 4
+        margin-left: 20px
+        position: relative
+        .activity-wrapper
+            width: 100%
+            overflow-y: scroll
+
+
+.activity-item
+    border-bottom: 1px solid $coloBorder
+    width: 100%
+    height: 92px
+    display: flex
+    align-items: center
+    .activity-item-avatar
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-left: 30px
+        width: 40px
+        min-width: 40px
+        height: 40px
+        min-height: 40px
+        border-radius: 50%
+        position: relative
+        img
+            width: 100%
+            min-width: 40px
+            height: 100%
+            min-height: 40px
+            border-radius: 50%
+        .online,
+        .offline
+            display: block
+            width: 9px
+            height: 9px
+            border: 2px solid $coloWhite
+            background: $colorGreen
+            border-radius: 50%
+            position: absolute
+            top: 0
+            left: -4px
+
+        .offline
+            background: #C5C5C5
+    .activity-item-body
+        display: flex
+        width: 100%
+        height: 100%
+        align-items: flex-start
+        margin-left: 10px
+        flex-direction: column
+        justify-content: center
+        margin-left: 10px
+        margin-right: 30px
+        .activity-item-body-title
+            font-size: 18px
+            .name
+                color: $colorGray
+            .description
+                color: $colorBgActiveDark
+        .activity-item-body-data
+            font-size: 18px
+            color: #8EA5B5
+            font-weight: 600
+            span
+                font-weight: 400
+
+
+
+
+
+
+
+@media screen and (min-width: 300px) and (max-width: 1024px)
+    .tabs
+        .activity
+            display: none
+
+    #tabs
+        ul
+            .tabs-descriptions
+                display: none
