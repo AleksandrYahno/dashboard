@@ -28,7 +28,6 @@ table
 
 
 // main style
-
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900')
 $fontSans: 'Source Sans Pro', sans-serif
 $colorBg: #F1F1F1
@@ -158,7 +157,6 @@ header
     background: $colorBgActiveDark
 
 
-
 .avatar
     display: flex
     height: 150px
@@ -217,6 +215,54 @@ header
         transform: rotate(-90deg)
         margin-left: 10px
 
+
+.button-add
+    border: none
+    background: $colorOrange
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    padding: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    margin-left: 10px
+    &:after
+        content: ''
+        display: block
+        width: 12px
+        height: 2px
+        background: $coloWhite
+        position: absolute
+        top: calc( 50% - 1px )
+        left: calc( 50% - 6px)
+        z-index: 1
+    &:before
+        content: ''
+        display: block
+        width: 12px
+        height: 2px
+        background: $coloWhite
+        position: absolute
+        top: calc( 50% - 1px )
+        left: calc( 50% - 6px)
+        transform: rotate(-90deg)
+        z-index: 1
+
+
+.update-button
+    border-radius: 60px
+    padding: 0
+    border: 1px solid $coloBorder
+    width: 40px
+    height: 40px
+    margin-left: 8px
+    &:hover
+        border: $coloWhite
+        background: $colorOrange
+    &:last-child
+        margin-right: 30px
 
 .head
     height: 100px
@@ -290,6 +336,7 @@ header
                 width: 11px
                 margin-left: 10px
 
+
 #tabs
     height: inherit
     position: relative
@@ -315,6 +362,7 @@ header
                 border-right: none
             &:last-child
                 border-radius: 0 3px 0 0
+                font-size: 22px
             a
                 color: $colorGray
                 font-size: 18px
@@ -375,6 +423,7 @@ header
         .activity-wrapper
             width: 100%
             overflow-y: scroll
+            padding: 0 0 56px 0
 
 
 .activity-item
@@ -438,10 +487,121 @@ header
                 font-weight: 400
 
 
+.projects-head
+    background: $coloWhite
+    border-bottom: 1px solid $coloBorder
+    height: 90px
+    width: 100%
+    position: absolute
+    top: 0
+    z-index: 1
+    display: flex
+    align-items: center
+    justify-content: space-between
+    form
+        width: 100%
+        margin-left: 30px
+        p
+            input
+                font-size: 22px
+                color: #C1C1C1
+                padding: 0
+                border: none
+                width: 100%
+                &::-webkit-input-placeholder
+                    color: #C1C1C1
+                &::-moz-placeholder
+                    color: #C1C1C1
+                &:-moz-placeholder
+                    color: #C1C1C1
+                &:-ms-input-placeholder
+                    color: #C1C1C1
+    .projects-head-select
+        height: 100%
+        width: 50%
+        margin-right: 30px
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        .projects-head-select-wrapper
+            border: 1px solid $coloBorder
+            border-radius: 50px
+            height: 40px
+            width: max-content
+            overflow: hidden
+            padding: 0 20px
+            select
+                border: none
+                background: $coloWhite
+                height: 40px
+                display: flex
+                align-items: center
+                justify-content: center
+                padding: 0 20px
+                font-size: 16px
+                color: $colorGray
 
 
+.projects-item
+    padding: 91px 0 56px 0
 
+.accordion
+    .accordion-header
+        height: 94px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        border-bottom: 1px solid $coloBorder
+        cursor: pointer
+        .accordion-header-section
+            height: 94px
+            display: flex
+            align-items: center
+            width: 50%
+            .description
+                display: flex
+                align-items: center
+                .procent
+                    width: 55px
+                    height: 33px
+                    color: $coloWhite
+                    background: $colorOrange
+                    border-radius: 3px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    font-size: 14px
+                    font-weight: 400
+                    margin: 0 15px 0 30px
+                    span
+                        font-size: 20px
+                        font-weight: 600
 
+                .text
+                    font-size: 22px
+                    color: $colorGray
+            .update
+                font-size: 16px
+                text-transform: uppercase
+                color: $colorGray
+                font-weight: 600
+                height: 40px
+                padding: 0 20px
+                border: 1px solid $coloBorder
+                border-radius: 25px
+                display: flex
+                align-items: center
+                justify-content: center
+
+    .accordion-body
+        border: 1px solid navy
+        height: 160px
+        .accordion-body-section
+            height: 80px
+            border: 1px solid rebeccapurple
+
+.right
+    justify-content: flex-end
 
 @media screen and (min-width: 300px) and (max-width: 1024px)
     .tabs

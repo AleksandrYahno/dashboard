@@ -24,7 +24,6 @@ $(document).ready(function ($) {
         $(this).addClass("active-navigation");
     });
 
-
     $( ".accordion" ).accordion({
         active: false,
         collapsible: true
