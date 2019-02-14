@@ -876,13 +876,211 @@ header {
       -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center; }
+    .accordion .accordion-header .accordion-header-section .update-button i {
+      height: 12px;
+      color: #DCDCDC; }
+    .accordion .accordion-header .accordion-header-section .update-button:hover i {
+      color: #FFFFFF; }
+    .accordion .accordion-header .accordion-header-section .angle i {
+      font-size: 16px;
+      height: auto; }
+
+.accordion .ui-state-active .accordion-header-section .angle i {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg); }
 
 .accordion .accordion-body {
-  border: 1px solid navy;
   height: 160px; }
   .accordion .accordion-body .accordion-body-section {
     height: 80px;
-    border: 1px solid rebeccapurple; }
+    border-bottom: 1px solid #DCDCDC;
+    background: #F8F8F8;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative; }
+    .accordion .accordion-body .accordion-body-section .accordion-body-section-left {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 50%;
+      height: 100%; }
+      .accordion .accordion-body .accordion-body-section .accordion-body-section-left .procent {
+        width: 55px;
+        height: 33px;
+        color: #ADADAD;
+        border: 1px solid #DCDCDC;
+        background: #F8F8F8;
+        -webkit-border-radius: 3px;
+                border-radius: 3px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0 15px 0 30px; }
+        .accordion .accordion-body .accordion-body-section .accordion-body-section-left .procent span {
+          font-size: 20px;
+          font-weight: 600; }
+      .accordion .accordion-body .accordion-body-section .accordion-body-section-left .text {
+        font-size: 22px;
+        color: #4B4B4B; }
+    .accordion .accordion-body .accordion-body-section .accordion-body-section-right {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 50%;
+      height: 100%;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
+      .accordion .accordion-body .accordion-body-section .accordion-body-section-right .update {
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #4B4B4B;
+        font-weight: 600;
+        height: 40px;
+        padding: 0 20px;
+        border: 1px solid #DCDCDC;
+        -webkit-border-radius: 25px;
+                border-radius: 25px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        cursor: pointer;
+        margin-left: 7px; }
+        .accordion .accordion-body .accordion-body-section .accordion-body-section-right .update span {
+          font-weight: 400; }
+        .accordion .accordion-body .accordion-body-section .accordion-body-section-right .update img {
+          width: 12px;
+          margin-right: 5px; }
+      .accordion .accordion-body .accordion-body-section .accordion-body-section-right .update-button {
+        background: #F8F8F8;
+        min-width: 40px; }
+        .accordion .accordion-body .accordion-body-section .accordion-body-section-right .update-button i {
+          height: 12px;
+          color: #DCDCDC; }
+      .accordion .accordion-body .accordion-body-section .accordion-body-section-right .activity-item-avatar {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        margin: 0 3px;
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        min-height: 40px;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+        position: relative;
+        cursor: pointer; }
+        .accordion .accordion-body .accordion-body-section .accordion-body-section-right .activity-item-avatar img {
+          width: 100%;
+          min-width: 40px;
+          height: 100%;
+          min-height: 40px;
+          -webkit-border-radius: 50%;
+                  border-radius: 50%; }
+        .accordion .accordion-body .accordion-body-section .accordion-body-section-right .activity-item-avatar .online,
+        .accordion .accordion-body .accordion-body-section .accordion-body-section-right .activity-item-avatar .offline {
+          display: block;
+          width: 9px;
+          height: 9px;
+          border: 2px solid #FFFFFF;
+          background: #ABCB57;
+          -webkit-border-radius: 50%;
+                  border-radius: 50%;
+          position: absolute;
+          top: 0;
+          left: -4px; }
+        .accordion .accordion-body .accordion-body-section .accordion-body-section-right .activity-item-avatar .offline {
+          background: #C5C5C5; }
+      .accordion .accordion-body .accordion-body-section .accordion-body-section-right .activity-item-avatar-sum {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        margin: 0 3px;
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        min-height: 40px;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+        border: 1px solid #DCDCDC; }
+        .accordion .accordion-body .accordion-body-section .accordion-body-section-right .activity-item-avatar-sum span {
+          color: #ADADAD;
+          font-size: 14px;
+          font-weight: 600; }
+  .accordion .accordion-body .bottom .accordion-body-section-left .procent span {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700; }
+  .accordion .accordion-body .bottom .accordion-body-section-left .text span {
+    text-decoration: line-through;
+    color: #DCDCDC;
+    font-weight: 400; }
+  .accordion .accordion-body .bottom .accordion-body-section-left .text i {
+    color: #DCDCDC;
+    font-size: 14px;
+    margin-left: 4px; }
 
 .right {
   -webkit-box-pack: end;
